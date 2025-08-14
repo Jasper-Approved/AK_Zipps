@@ -1,0 +1,75 @@
+.footer-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  height: 200px;
+  background: var(--scroll-bg);
+}
+
+.gallery-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  scroll-snap-type: x mandatory;
+}
+
+.gallery-item {
+  flex: 0 0 33.33%;
+  scroll-snap-align: start;
+  text-align: center;
+  padding: 10px;
+}
+
+.gallery-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.gallery-item .label {
+  font-family: 'Scroll Serif';
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.gallery-item .price {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: var(--footer-bg);
+  padding: 40px 20px;
+  font-family: 'Scroll Sans';
+}
+
+.footer-column {
+  flex: 1 1 30%;
+  margin: 10px;
+  min-width: 250px;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-column input[type="email"] {
+  width: 80%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--accent);
+}
+
+.footer-column button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
