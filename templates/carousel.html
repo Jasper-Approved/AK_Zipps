@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AK-Zipps Carousel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/carousel.css') }}">
+</head>
+<body>
+  <header>
+    <h1>🧵 AK-Zipps Carousel</h1>
+    <p>Scroll through the glyphs. Tug the lineage.</p>
+  </header>
+
+  <section class="carousel-container">
+    <div class="carousel-item logo-intro">
+      <img src="{{ url_for('static', filename='images/ak-zipps-logo.png') }}" class="base-image">
+      <div class="fog-layer"></div>
+      <div class="caption-scroll">Crafted in Anchorage. Tugged with love.</div>
+    </div>
+    <!-- Add more carousel items here -->
+  </section>
+
+  <footer>
+    <p>🪶 Scroll ends. Lineage continues.</p>
+  </footer>
+</body>
+</html>
