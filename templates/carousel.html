@@ -27,8 +27,9 @@
         <!-- Dynamic Zipper Pulls -->
         {% for pull in zipper_pulls %}
           <div class="carousel-item">
-            <img src="{{ pull.image_url }}" class="d-block w-100 {{ pull.glyph_class }}" alt="Zipper Pull">
-            <div class="carousel-caption d-none d-md-block">
+          <img src="{{ url_for('static', filename='images/zipper_pulls/' + pull.image_filename) }}"
+              class="d-block w-100 {{ pull.glyph_class }}" alt="Zipper Pull">
+          <div class="carousel-caption d-none d-md-block">
               <h5>{{ pull.caption }}</h5>
             </div>
           </div>
