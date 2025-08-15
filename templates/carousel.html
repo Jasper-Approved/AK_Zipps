@@ -26,15 +26,18 @@
 
         <!-- Dynamic Zipper Pulls -->
         {% for pull in zipper_pulls %}
-          <div class="carousel-item">
-          <img src="{{ url_for('static', filename='images/zipper_pulls/' + pull.image_filename) }}"
-              class="d-block w-100 {{ pull.glyph_class }}" alt="Zipper Pull">
-          <div class="carousel-caption d-none d-md-block">
-              <h5>{{ pull.caption }}</h5>
-            </div>
-          </div>
-        {% endfor %}
-
+        <div class="carousel-item">
+         <img src="{{ url_for('static', filename='images/zipper_pulls/' + pull.image_filename) }}"
+         class="d-block w-100 {{ pull.glyph_class }}" alt="Zipper Pull">
+         <div class="carousel-caption d-none d-md-block">
+         <h5>{{ pull.caption }}</h5>
+         <p>{{ pull.lineage_note }}</p>
+         <p class="price">{{ pull.price }}</p>
+         <a href="{{ pull.link }}" class="btn btn-outline-light">Tug This Pull</a>
+        </div>
+       </div>
+       {% endfor %}
+       
       </div>
 
       <!-- Carousel Controls -->
