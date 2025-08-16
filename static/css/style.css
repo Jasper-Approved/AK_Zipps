@@ -1,3 +1,11 @@
+.collection-card:hover::after {
+  content: "This pull carries the silence of Denali mornings.";
+  position: absolute;
+  background: rgba(255,255,255,0.7);
+  padding: 0.5em;
+  font-style: italic;
+}
+
 .footer-gallery {
   display: flex;
   align-items: center;
