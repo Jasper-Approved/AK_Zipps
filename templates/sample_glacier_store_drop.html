@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ pull.label }} — AK-Zipps</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <!-- 🧊 Banner Scroll -->
+  <section class="pull-banner">
+    <img src="{{ url_for('static', filename='images/zipper_pulls/' + pull.image_filename) }}" alt="{{ pull.label }}">
+    <div class="fog-overlay"></div>
+    <h1>{{ pull.caption }}</h1>
+    <p class="lineage">{{ pull.lineage_note }}</p>
+  </section>
+
+  <!-- 🧩 Pull Details -->
+  <section class="pull-details">
+    {% if pull.materials %}
+    <p><strong>Materials:</strong>
+      {% for mat in pull.materials %}
+        <span class="material-tag">{{ mat }}</span>
+      {% endfor %}
+    </p>
+    {% endif %}
+
+    {% if pull.collection %}
+    <p><strong>Collection:</strong> {{ pull.collection }}</p>
+    {% endif %}
+
+    <p><strong>Price:</strong> {{ pull.price }}</p>
+
+    <a href="/cart/add/{{ pull.id }}" class="btn btn-outline-light">Tug This Pull</a>
+  </section>
+
+  <!-- 🪶 Optional Related Pulls -->
+  {% if related_pulls %}
+  <section class="related-pulls">
+    <h3>Related Pulls</h3>
+    <div class="pull-grid">
+      {% for rp in related_pulls %}
+      <div class="pull-card">
+        <img src="{{ url_for('static', filename='images/zipper_pulls/' + rp.image_filename) }}" alt="{{ rp.label }}">
+        <h4>{{ rp.caption }}</h4>
+        <p class="price">{{ rp.price }}</p>
+        <a href="{{ rp.link }}" class="btn btn-outline-light">View</a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <footer>
+    <p>🪶 Scroll ends. Lineage continues.</p>
+  </footer>
+
+</body>
+</html>

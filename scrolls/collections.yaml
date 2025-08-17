@@ -1,0 +1,41 @@
+- id: antler
+  label: Antler
+  icon: 🦌
+  description: Crafted from shed antlers, each pull echoes tundra resilience.
+  image: antler-banner.jpg
+  link: /collections/antler
+
+- id: bone
+  label: Bone
+  icon: 🦴
+  description: Etched from salvaged bone—quiet strength in every tug.
+  image: bone-banner.jpg
+  link: /collections/bone
+
+- id: glass
+  label: Glass
+  icon: 🧊
+  description: Fused and frosted—pulls that shimmer like glacier light.
+  image: glass-banner.jpg
+  link: /collections/glass
+
+- id: necklaces
+  label: Necklaces
+  icon: 📿
+  description: Wearable glyphs for the neck—layered with meaning.
+  image: necklaces-banner.jpg
+  link: /collections/necklaces
+
+- id: earrings
+  label: Earrings
+  icon: 🪶
+  description: Lightweight lineage drops for ears and air.
+  image: earrings-banner.jpg
+  link: /collections/earrings
+
+- id: accessories
+  label: Accessories
+  icon: 🎒
+  description: Bag charms, zipper glyphs, and fog-looped flair.
+  image: accessories-banner.jpg
+  link: /collections/accessories

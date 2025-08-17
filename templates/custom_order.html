@@ -1,0 +1,25 @@
+<h1>🪶 Request a Custom Pull</h1>
+<p>Describe your dream glyph. We’ll stitch it into reality.</p>
+
+<form method="POST" class="custom-form">
+  <label for="name">Your Name</label>
+  <input type="text" name="name" required>
+
+  <label for="email">Email</label>
+  <input type="email" name="email" required>
+
+  <label for="request">Your Request</label>
+  <textarea name="request" rows="5" placeholder="e.g. Raven glyph with glacier cord, stitched under moonlight" required></textarea>
+
+  <button type="submit" class="btn btn-outline-light">Send Ritual</button>
+</form>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="flash-message">
+      {% for msg in messages %}
+        <p>{{ msg }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}

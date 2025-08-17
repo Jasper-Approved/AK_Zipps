@@ -1,20 +1,41 @@
-- image_filename: glacier-glow.png
+- id: glacier-glow
+  label: Glacier Glow
+  image_filename: glacier-glow.png
   caption: "Glacier Glow"
   glyph_class: fog-shimmer
+  collection: Glaciers #This is where you break down in Antler, Bone, Glass and so no
+  material: #Example if using multiple materials
+   -Bone
+   -Glass
+  color: ice-blue
   lineage_note: "Infused with icefield clarity and stitched under solstice light."
   price: "$12"
   link: "/store/glacier-glow"
+  tagss: #tags for filtering and searching examples
+   -fog
+   -wearable
+   -zipper-pull
 
-- image_filename: tundra-twist.png
+- id: tundra-twist
+  label: Tundra Twist
+  image_filename: tundra-twist.png
   caption: "Tundra Twist"
   glyph_class: glyph-overlay
+  collection: Glaciers
+  material: paracord
+  color: ice-blue
   lineage_note: "Twisted in the wind of Denali’s breath. A pull for wanderers."
   price: "$10"
   link: "/store/tundra-twist"
 
-- image_filename: aurora-loop.png
+- id: aurora-loop
+  label: Aurora Loop
+  image_filename: aurora-loop.png
   caption: "Aurora Loop"
   glyph_class: aurora-glow
+  collection: Glaciers
+  material: paracord
+  color: ice-blue
   lineage_note: "Loops the northern lights into your jacket’s soul."
   price: "$14"
   link: "/store/aurora-loop"

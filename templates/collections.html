@@ -1,4 +1,15 @@
 <section class="collection-grid">
+  {% for col in collections %}
+  <div class="collection-card">
+    <img src="{{ url_for('static', filename='images/banners/' + col.image) }}" alt="{{ col.label }}">
+    <h3>{{ col.icon }} {{ col.label }}</h3>
+    <p>{{ col.description }}</p>
+    <a href="{{ col.link }}" class="btn btn-outline-light">Explore</a>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="collection-grid">
   <div class="glyph-icon">🐻</div>
   <div class="glyph-icon">❄️</div>
   <div class="glyph-icon">🪶</div>

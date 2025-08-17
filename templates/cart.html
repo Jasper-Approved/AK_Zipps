@@ -1,0 +1,17 @@
+<h1>🛒 Your Cart</h1>
+
+{% if cart_items %}
+  <ul class="cart-list">
+    {% for item in cart_items %}
+    <li>
+      <img src="{{ url_for('static', filename='images/zipper_pulls/' + item.image_filename) }}" alt="{{ item.label }}">
+      <strong>{{ item.caption }}</strong> — {{ item.price }}
+      <a href="/store/{{ item.id }}">View</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <a href="/cart/remove/{{ item.id }}" class="btn btn-sm">Remove</a>
+  <a href="/checkout" class="btn btn-outline-light">Proceed to Ritual</a>
+{% else %}
+  <p>Your cart is empty. No glyphs tugged yet.</p>
+{% endif %}

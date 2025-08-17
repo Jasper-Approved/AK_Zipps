@@ -1,0 +1,22 @@
+- id: fog-loop
+  label: Fog Loop
+  image: fog-loop.jpg
+  description: This pull carries the silence of Denali mornings.
+  price: 12
+  link: /pulls/fog-loop
+
+- id: candy-tug
+  label: Candy Tug
+  image: candy-tug.jpg
+  description: Sweeten your carry with this playful charm.
+  price: 15
+  link: /pulls/candy-tug
+
+- id: glove-glyph
+  label: Glove Glyph
+  image: glove-glyph.jpg
+  description: Winter-proof and mitten-friendly.
+  price: 9
+  link: /pulls/glove-glyph
+
+# Add more items as needed...

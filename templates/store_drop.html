@@ -1,0 +1,18 @@
+<section class="pull-banner">
+  <img src="{{ url_for('static', filename='images/zipper_pulls/' + pull.image_filename) }}" alt="{{ pull.label }}">
+  <div class="fog-overlay"></div>
+  <h1>{{ pull.caption }}</h1>
+  <p class="lineage">{{ pull.lineage_note }}</p>
+</section>
+
+<section class="pull-details">
+  <p><strong>Materials:</strong>
+    {% for mat in pull.materials %}
+      <span class="material-tag">{{ mat }}</span>
+    {% endfor %}
+  </p>
+
+  <p><strong>Price:</strong> {{ pull.price }}</p>
+
+  <a href="/cart/add/{{ pull.id }}" class="btn btn-outline-light">Tug This Pull</a>
+</section>

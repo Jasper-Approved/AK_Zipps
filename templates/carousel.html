@@ -3,44 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <title>AK-Zipps Carousel</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/carousel.css') }}">
-  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- 🧵 Header Ritual -->
   <header>
     <h1>🧵 AK-Zipps Carousel</h1>
     <p>Scroll through the glyphs. Tug the lineage.</p>
   </header>
 
+  <!-- 🎠 Main Carousel Scroll -->
   <section class="carousel-container">
     <div id="zip-carousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
 
-        <!-- Static Intro Slide -->
+        <!-- 🪶 Static Intro Slide -->
         <div class="carousel-item active logo-intro">
           <img src="{{ url_for('static', filename='images/ak-zipps-logo.png') }}" class="base-image" alt="AK-Zipps Logo">
           <div class="fog-layer"></div>
           <div class="caption-scroll">Crafted in Anchorage. Tugged with love.</div>
         </div>
 
-        <!-- Dynamic Zipper Pulls -->
+        <!-- 🔄 Dynamic Zipper Pulls -->
         {% for pull in zipper_pulls %}
         <div class="carousel-item">
-         <img src="{{ url_for('static', filename='images/zipper_pulls/' + pull.image_filename) }}"
-         class="d-block w-100 {{ pull.glyph_class }}" alt="Zipper Pull">
-         <div class="carousel-caption d-none d-md-block">
-         <h5>{{ pull.caption }}</h5>
-         <p>{{ pull.lineage_note }}</p>
-         <p class="price">{{ pull.price }}</p>
-         <a href="{{ pull.link }}" class="btn btn-outline-light">Tug This Pull</a>
+          <img src="{{ url_for('static', filename='images/zipper_pulls/' + pull.image_filename) }}"
+               class="d-block w-100 {{ pull.glyph_class }}" alt="Zipper Pull">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{ pull.caption }}</h5>
+            <p>{{ pull.lineage_note }}</p>
+            <p class="price">${{ pull.price }}</p>
+            <a href="{{ pull.link }}" class="btn btn-outline-light">Tug This Pull</a>
+          </div>
         </div>
-       </div>
-       {% endfor %}
-       
+        {% endfor %}
+
       </div>
 
-      <!-- Carousel Controls -->
+      <!-- ◀▶ Carousel Controls -->
       <button class="carousel-control-prev" type="button" data-bs-target="#zip-carousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -52,12 +53,43 @@
     </div>
   </section>
 
+  <!-- 🖼️ Footer Gallery Scroll -->
+  <section class="footer-gallery">
+    <button class="nav-btn prev-btn">◀</button>
+    <div class="gallery-track" id="galleryTrack">
+      <!-- JS will populate items here -->
+    </div>
+    <button class="nav-btn next-btn">▶</button>
+  </section>
+
+  <!-- 🌀 Modal Remedy Scroll -->
+  <div id="remedyModal" class="modal-scroll">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeRemedyModal()">×</span>
+      <h2 id="modalLabel">Pull Label</h2>
+      <img id="modalImage" src="" alt="Pull Image">
+      <p id="modalDescription">Poetic lineage description here.</p>
+      <p id="modalPrice" class="price"></p>
+      <a id="modalLink" href="#" class="btn btn-outline-light">Tug This Pull</a>
+    </div>
+  </div>
+
+  <!-- 🪶 Footer Ritual -->
   <footer>
     <p>🪶 Scroll ends. Lineage continues.</p>
   </footer>
 
-  <!-- Bootstrap JS -->
+  <!-- 📜 Footer Items Data -->
+  <script id="footerItemsData" type="application/json">
+    {{ footer_items | tojson }}
+  </script>
+
+  <!-- 📦 Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 🧠 Carousel + Modal Logic -->
+  <script src="{{ url_for('static', filename='js/carousel.js') }}"></script>
 </body>
 </html>
+
 

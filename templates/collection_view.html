@@ -1,0 +1,17 @@
+<section class="collection-header">
+  <img src="{{ url_for('static', filename='images/banners/' + collection.image) }}" alt="{{ collection.label }}">
+  <h2>{{ collection.icon }} {{ collection.label }}</h2>
+  <p>{{ collection.description }}</p>
+</section>
+
+<section class="pull-grid">
+  {% for pull in pulls %}
+  <div class="pull-card">
+    <img src="{{ url_for('static', filename='images/zipper_pulls/' + pull.image_filename) }}" alt="{{ pull.label }}">
+    <h4>{{ pull.caption }}</h4>
+    <p>{{ pull.lineage_note }}</p>
+    <p class="price">{{ pull.price }}</p>
+    <a href="{{ pull.link }}" class="btn btn-outline-light">Tug This Pull</a>
+  </div>
+  {% endfor %}
+</section>
