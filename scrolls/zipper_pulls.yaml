@@ -1,5 +1,9 @@
 - id: glacier-glow
   label: Glacier Glow
+  category_id: "CATEG1234567890"
+  sku: "AZP-AUR-001"
+  price: 12.00
+  variation_id: "VARI1234567890"
   image_filename: glacier-glow.png
   caption: "Glacier Glow"
   glyph_class: fog-shimmer

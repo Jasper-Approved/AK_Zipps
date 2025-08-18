@@ -1,0 +1,16 @@
+categories:
+  - id: "CATEG1234567890"
+    name: "Aurora Series"
+    pulls:
+      - label: "Aurora Borealis"
+        sku: "AZP-AUR-001"
+        variation_id: "VARI1234567890"
+        price: 12.00
+      - label: "Aurora Mist"
+        sku: "AZP-AUR-002"
+        variation_id: "VARI1234567891"
+        price: 13.00
+      - label: "Aurora Glow"
+        sku: "AZP-AUR-003"      
+        variation_id: "VARI1234567892"
+        price: 15.00

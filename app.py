@@ -139,3 +139,19 @@ def custom_order():
         flash("Your request has been received. The glyphs are listening.")
         return redirect("/custom-order")
     return render_template("custom_order.html")
+
+# --- Collections ---
+#@app.route("/collections")
+#def collections_grid():
+ #   all_collections = load_collections()
+  #  return render_template("collections_grid.html", collections=all_collections)
+@app.route("/collections")
+def collections_grid():
+    all_collections = load_collections()
+    inventory_data = load_mock_inventory()
+    for col in all_collections:
+        col["inventory_items"] = inventory_data.get(col["category_id"], [])
+    return render_template("collections_grid.html", collections=all_collections)
+
+def load_mock_inventory():
+    return load_yaml_scroll("scrolls/mock_inventory.yaml").get("inventory", {})

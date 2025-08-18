@@ -1,41 +1,66 @@
-- id: antler
-  label: Antler
-  icon: 🦌
-  description: Crafted from shed antlers, each pull echoes tundra resilience.
-  image: antler-banner.jpg
-  link: /collections/antler
+- collections:
+  - id: antler
+    label: "Antler"
+    category_id: "CATEG1234567890"
+    sku: "AZP-ANT-001"
+    price: 12.00
+    variation_id: "VARI-ANT-001"
+    icon: "🦌"
+    description: "Crafted from shed antlers, each pull echoes tundra resilience."
+    image: "antler-banner.jpg"
+    link: "/collections/antler"
 
-- id: bone
-  label: Bone
-  icon: 🦴
-  description: Etched from salvaged bone—quiet strength in every tug.
-  image: bone-banner.jpg
-  link: /collections/bone
+  - id: bone
+    label: "Bone"
+    category_id: "CATEG1234567890"
+    sku: "AZP-BON-001"
+    price: 12.00
+    variation_id: "VARI-BON-001"
+    icon: "🦴"
+    description: "Etched from salvaged bone—quiet strength in every tug."
+    image: "bone-banner.jpg"
+    link: "/collections/bone"
 
-- id: glass
-  label: Glass
-  icon: 🧊
-  description: Fused and frosted—pulls that shimmer like glacier light.
-  image: glass-banner.jpg
-  link: /collections/glass
+  - id: glass
+    label: "Glass"
+    category_id: "CATEG1234567890"
+    sku: "AZP-GLA-001"
+    price: 12.00
+    variation_id: "VARI-GLA-001"
+    icon: "🧊"
+    description: "Fused and frosted—pulls that shimmer like glacier light."
+    image: "glass-banner.jpg"
+    link: "/collections/glass"
 
-- id: necklaces
-  label: Necklaces
-  icon: 📿
-  description: Wearable glyphs for the neck—layered with meaning.
-  image: necklaces-banner.jpg
-  link: /collections/necklaces
+  - id: necklaces
+    label: "Necklaces"
+    category_id: "CATEG1234567890"
+    sku: "AZP-NEC-001"
+    price: 12.00
+    variation_id: "VARI-NEC-001"
+    icon: "📿"
+    description: "Wearable glyphs for the neck—layered with meaning."
+    image: "necklaces-banner.jpg"
+    link: "/collections/necklaces"
 
-- id: earrings
-  label: Earrings
-  icon: 🪶
-  description: Lightweight lineage drops for ears and air.
-  image: earrings-banner.jpg
-  link: /collections/earrings
+  - id: earrings
+    label: "Earrings"
+    category_id: "CATEG1234567890"
+    sku: "AZP-EAR-001"
+    price: 12.00
+    variation_id: "VARI-EAR-001"
+    icon: "🪶"
+    description: "Lightweight lineage drops for ears and air."
+    image: "earrings-banner.jpg"
+    link: "/collections/earrings"
 
-- id: accessories
-  label: Accessories
-  icon: 🎒
-  description: Bag charms, zipper glyphs, and fog-looped flair.
-  image: accessories-banner.jpg
-  link: /collections/accessories
+  - id: accessories
+    label: "Accessories"
+    category_id: "CATEG1234567890"
+    sku: "AZP-ACC-001"
+    price: 12.00
+    variation_id: "VARI-ACC-001"
+    icon: "🎒"
+    description: "Bag charms, zipper glyphs, and fog-looped flair."
+    image: "accessories-banner.jpg"
+    link: "/collections/accessories"

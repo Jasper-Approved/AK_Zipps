@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="collection-grid">
+  {% for item in collections %}
+  <div class="collection-card">
+    <a href="{{ item.link }}">
+      <img src="{{ url_for('static', filename='images/' ~ item.image) }}" alt="{{ item.label }} banner" class="collection-banner">
+      <h2 class="collection-title">{{ item.icon }} {{ item.label }}</h2>
+      <p class="collection-description">{{ item.description }}</p>
+      <span class="collection-price">${{ "%.2f"|format(item.price) }}</span>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+<ul class="inventory-list">
+  {% for item in collection.inventory_items %}
+  <li>
+    <strong>{{ item.name }}</strong> — {{ item.quantity_available }} in stock  
+    <br><em>{{ item.lineage }}</em>
+  </li>
+  {% endfor %}
+</ul>

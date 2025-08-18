@@ -181,6 +181,30 @@
   transform: scale(1.03);
 }
 
+.collection-banner {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.collection-title {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  color: var(--scroll-title, #fff);
+}
+
+.collection-description {
+  font-size: 0.95rem;
+  color: var(--scroll-text, #ccc);
+}
+
+.collection-price {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: var(--scroll-price, #eee);
+}
+
 .pull-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

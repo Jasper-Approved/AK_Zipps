@@ -1,0 +1,49 @@
+inventory:
+  CATEG1234567890:
+    - item_id: "ITEM-ANT-001"
+      name: "Antler Pull – Tundra Echo"
+      variation_id: "VARI-ANT-001"
+      sku: "AZP-ANT-001"
+      quantity_available: 8
+      updated_at: "2025-08-17T21:00:00-08:00"
+      lineage: "Crafted from shed antlers, blessed under waning moon."
+
+    - item_id: "ITEM-BON-001"
+      name: "Bone Pull – Quiet Strength"
+      variation_id: "VARI-BON-001"
+      sku: "AZP-BON-001"
+      quantity_available: 3
+      updated_at: "2025-08-17T20:45:00-08:00"
+      lineage: "Etched from salvaged bone, sealed in glacier mist."
+
+    - item_id: "ITEM-GLA-001"
+      name: "Glass Pull – Glacier Light"
+      variation_id: "VARI-GLA-001"
+      sku: "AZP-GLA-001"
+      quantity_available: 0
+      updated_at: "2025-08-17T20:30:00-08:00"
+      lineage: "Fused and frosted, last batch shimmered at dawn."
+
+    - item_id: "ITEM-NEC-001"
+      name: "Necklace – Glyph Cascade"
+      variation_id: "VARI-NEC-001"
+      sku: "AZP-NEC-001"
+      quantity_available: 5
+      updated_at: "2025-08-17T20:15:00-08:00"
+      lineage: "Layered with meaning, worn by Skyfarers."
+
+    - item_id: "ITEM-EAR-001"
+      name: "Earring – Feather Drop"
+      variation_id: "VARI-EAR-001"
+      sku: "AZP-EAR-001"
+      quantity_available: 2
+      updated_at: "2025-08-17T20:00:00-08:00"
+      lineage: "Lightweight lineage, tuned to wind glyphs."
+
+    - item_id: "ITEM-ACC-001"
+      name: "Accessory – Fog Loop Charm"
+      variation_id: "VARI-ACC-001"
+      sku: "AZP-ACC-001"
+      quantity_available: 10
+      updated_at: "2025-08-17T19:45:00-08:00"
+      lineage: "Bag charm with fog-looped flair, glyph-locked."
